@@ -1,0 +1,355 @@
+/*
+ * AzureCSS Framework version 1.5.16 (Alpha Version)
+ * Default Style (no edit file)
+ * Author: GroupMediaVegarus
+ * Mail: group@vegarus.su
+ * Site: https://group.vegarus.su/azurecss
+ * MIT License
+ * All right reversed
+ * Copyright 2021
+ * Powered by GroupMediaVegarus
+ */
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-family: Scada, Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+img {
+  display: block;
+}
+
+/* // RESET */
+/* CONTAINER */
+.container {
+  margin: 10px auto;
+  padding: 10px 0;
+  width: 1220px;
+}
+
+.container-bg {
+  background-color: #ffffff;
+  border: 1px solid #d3d3d3;
+  box-shadow: #d3d3d3 0 0 10px;
+}
+
+/* // CONTAINER */
+/* FLEX */
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.row.row-reverse {
+  flex-direction: row-reverse !important;
+}
+.row.column {
+  flex-direction: column !important;
+}
+.row.column-reverse {
+  flex-direction: column-reverse !important;
+}
+
+.col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1, .col-auto, .col-fix, .col {
+  min-height: 1px;
+  position: relative;
+}
+
+/* COL */
+.col {
+  flex: 1 0 auto;
+}
+.col-fix {
+  flex: 0 0 1;
+}
+.col-auto {
+  flex: 0 0 auto;
+}
+
+.col-1 {
+  width: 8.3333333333%;
+  flex: 0 0 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+  flex: 0 0 16.6666666667%;
+}
+
+.col-3 {
+  width: 25%;
+  flex: 0 0 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+  flex: 0 0 33.3333333333%;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+  flex: 0 0 41.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+  flex: 0 0 50%;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+  flex: 0 0 58.3333333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+  flex: 0 0 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+  flex: 0 0 75%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+  flex: 0 0 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+  flex: 0 0 91.6666666667%;
+}
+
+.col-12 {
+  width: 100%;
+  flex: 0 0 100%;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+.order-4 {
+  order: 4;
+}
+
+.order-5 {
+  order: 5;
+}
+
+.order-6 {
+  order: 6;
+}
+
+.order-7 {
+  order: 7;
+}
+
+.order-8 {
+  order: 8;
+}
+
+.order-9 {
+  order: 9;
+}
+
+.order-10 {
+  order: 10;
+}
+
+.order-11 {
+  order: 11;
+}
+
+.order-12 {
+  order: 12;
+}
+
+.margin-left-1 {
+  margin-left: 8.3333333333%;
+}
+
+.margin-left-2 {
+  margin-left: 16.6666666667%;
+}
+
+.margin-left-3 {
+  margin-left: 25%;
+}
+
+.margin-left-4 {
+  margin-left: 33.3333333333%;
+}
+
+.margin-left-5 {
+  margin-left: 41.6666666667%;
+}
+
+.margin-left-6 {
+  margin-left: 50%;
+}
+
+.margin-left-7 {
+  margin-left: 58.3333333333%;
+}
+
+.margin-left-8 {
+  margin-left: 66.6666666667%;
+}
+
+.margin-left-9 {
+  margin-left: 75%;
+}
+
+.margin-left-10 {
+  margin-left: 83.3333333333%;
+}
+
+.margin-left-11 {
+  margin-left: 91.6666666667%;
+}
+
+.margin-left-12 {
+  margin-left: 100%;
+}
+
+.margin-right-1 {
+  margin-right: 8.3333333333%;
+}
+
+.margin-right-2 {
+  margin-right: 16.6666666667%;
+}
+
+.margin-right-3 {
+  margin-right: 25%;
+}
+
+.margin-right-4 {
+  margin-right: 33.3333333333%;
+}
+
+.margin-right-5 {
+  margin-right: 41.6666666667%;
+}
+
+.margin-right-6 {
+  margin-right: 50%;
+}
+
+.margin-right-7 {
+  margin-right: 58.3333333333%;
+}
+
+.margin-right-8 {
+  margin-right: 66.6666666667%;
+}
+
+.margin-right-9 {
+  margin-right: 75%;
+}
+
+.margin-right-10 {
+  margin-right: 83.3333333333%;
+}
+
+.margin-right-11 {
+  margin-right: 91.6666666667%;
+}
+
+.margin-right-12 {
+  margin-right: 100%;
+}
+
+.margin-left-full {
+  margin-left: auto;
+}
+
+.margin-right-full {
+  margin-right: auto;
+}
+
+/* // COL */
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.justify-content-around {
+  justify-content: space-baround;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-items-baseline {
+  align-items: baseline;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+
+.align-self-start {
+  align-self: flex-start;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.align-self-end {
+  align-self: flex-end;
+}
+
+.align-self-baseline {
+  align-self: baseline;
+}
+
+.align-self-stretch {
+  align-self: stretch;
+}
+
+/* // FLEX */

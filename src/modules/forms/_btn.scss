@@ -1,0 +1,28 @@
+/* BUTTON */
+
+.btn-group {
+    display: flex;
+    flex-direction: row;
+    .btn {
+        @include btn_group(get_borad(btn));
+    }
+
+    &.column {
+        flex-direction: column;
+        gap: 2px;
+
+        .btn {
+            border-radius: #{get_borad(btn)}px !important;
+        }
+    }
+}
+
+.btn {
+    border-radius: #{get_borad(btn)}px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@include map_form(btn);
+/* // BUTTON */

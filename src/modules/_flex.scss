@@ -1,0 +1,57 @@
+/* FLEX */
+
+%displayrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.row {
+    @extend %displayrow;
+
+    @each $attr in $attr_row {
+        &.#{$attr} {
+            flex-direction: #{$attr} !important;
+        }
+    }
+}
+
+%colitems {
+    min-height: 1px;
+    position: relative;
+}
+
+/* COL */
+.col {
+    @extend %colitems;
+    flex: 1 0 auto;
+
+    &-fix {
+        @extend %colitems;
+        flex: 0 0 1;
+    }
+
+    &-auto {
+        @extend %colitems;
+        flex: 0 0 auto;
+    }
+}
+
+@each $attr in $attr_col {
+    @include style_col($attr);
+}
+
+.margin-left-full {
+    margin-left: auto;
+}
+
+.margin-right-full {
+    margin-right: auto;
+}
+/* // COL */
+
+@include get_align(justify-content, (1:6));
+@include get_align(align-items, (1:3, 7:8));
+@include get_align(align-self, (1:3, 7:8));
+
+/* // FLEX */

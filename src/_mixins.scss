@@ -1,0 +1,68 @@
+// CONTAINER
+@mixin cont_style() {
+    $type_width: map-get($cont_style, type);
+    $size: 0;
+
+    @if map-has-key($cont_style, margin) {
+        $margin_get: map-get($cont_style, margin);
+        $margin_len: length($margin_get);
+        @if $margin_len == 1 {
+            margin: #{$margin_get} auto;
+        } @else if $margin_len == 2 {
+            margin: #{nth($margin_get, 1)} auto #{nth($margin_get, 2)};
+        }
+    }
+
+    @if map-has-key($cont_style, padding) {
+        padding: #{map-get($cont_style, padding)} 0;
+        $size: calc(map-get($cont_style, padding) * 2 + map-get($cont_style, size));
+    }
+    
+    @if $type_width == width {
+        #{$type_width}: #{$size};
+    }
+}
+
+// CONTAINER //
+
+// FLEX
+@mixin style_col($name_attr) {
+    @for $i from 1 through $col_count {
+        @if $name_attr == col {
+            .#{$name_attr}-#{$i} {
+                @extend %colitems;
+                width: calc_col($i);
+                flex: 0 0 calc_col($i);
+            }
+        } @else if $name_attr == order {
+            .#{$name_attr}-#{$i} {
+                order: $i;
+            }
+        } @else if $name_attr != col and $name_attr != order {
+            .#{$name_attr}-#{$i} {
+                #{$name_attr}: calc_col($i);
+            }
+        }
+    }
+}
+
+@mixin get_align($name_attr, $is_for) {
+    $attr_list: map-keys($attr_align);
+    @each $i_start, $i_end in $is_for {
+        @for $i_count from $i_start through $i_end {
+            .#{$name_attr}-#{nth($attr_list, $i_count)} {
+                #{$name_attr}: map-get($attr_align, nth($attr_list, $i_count));
+            }
+        }
+    }
+}
+
+// STYLE FLEX //
+
+// STYLE CSS
+@mixin attr_style($style) {
+    @each $attr, $value in $style {
+        #{$attr}: $value;
+    }
+}
+// STYLE CSS //

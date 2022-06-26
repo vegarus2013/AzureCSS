@@ -1,0 +1,81 @@
+// Add Font libs
+$libs_add: (font-awesome, font-weather, font-scada);
+$font_add: (Scada); // Add Font Family Name
+
+// Setting body background-color
+$body_bg: #f5f5f5;
+
+// СOL
+$col_count: 12; // Number of columns (Flex)
+
+// Basic Container Settings
+$cont_style: (
+    margin: (10px), // The upper and lower outer margins are adjusted.
+                    // It is not necessary to set "auto", after compilation it is set automatically.
+                    // Example: margin  (10px) -> top and bottom, (10px, 20px) -> top, bottom
+    padding: 10px,
+    type: width,
+    size: 1200px
+);
+
+$cont_inner_style: (
+    background-color: #ffffff,
+    border: 1px solid #d3d3d3,
+    box-shadow: #d3d3d3 0 0 10px
+);
+
+// Basic Navbar Settings
+
+$navbar_style: (
+    height: 172px
+);
+
+// Setting style color
+// Table style Scss
+// Адрес цветовой схемы: https://colorscheme.ru
+
+// In a future version of the color generator and effect color
+// ---
+// -----
+
+$color_style: (
+    primary: ( // Name color class
+        add: True, // Add color primary, default True
+        list: (#0c5aa6, #26527c, #04396c, #408ad2, #679ed2) // Color Primary Default,
+    ),
+    secondary-a: (
+        add: True, // Add color primary, True or False
+        list: (#ffc300, #bf9e30, #a67f00, #ffd240, #ffde73) // Color Secondary A,
+    ),
+    secondary-b: (
+        add: False, // Add color primary, True or False
+        list: (#ff5300, #bf5e30, #a63600, #ff7e40, #ffa073) // Color Secondary B,
+    )
+);
+
+// Setting style form
+$style_form: (
+    btn: (
+        border-radius: 4px,
+        primary: (
+            default: (
+                transition: all ease-in-out 0.25s,
+                padding: 0 4px,
+                height: 24px,
+                background-color: color_get(primary, 1),
+                color: #ffffff,
+                text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px
+            ),
+            hover: (
+                transition: all ease-in-out 0.25s,
+                background-color: color_get(primary, 3),
+            ),
+            focus: (
+                transition: all ease-in-out 0.25s,
+                background-color: color_get(secondary-b, 1)
+            )
+        )
+    )
+);
+// Setting style form */
+// Basic Settings

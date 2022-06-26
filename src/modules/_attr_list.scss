@@ -1,0 +1,18 @@
+// FONT FAMILY STANDART
+$font_list: (Arial, Helvetica, sans-serif);
+// FONT FAMILY STANDART //
+
+// FLEX
+$attr_row: (row-reverse, column, column-reverse);
+$attr_col: (col, order, margin-left, margin-right);
+$attr_align: (
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    around: space-baround,
+    between: space-between,
+    evenly: space-evenly,
+    baseline: baseline,
+    stretch: stretch
+);
+// FLEX

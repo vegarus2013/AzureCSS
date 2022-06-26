@@ -1,0 +1,25 @@
+@import 'version';
+@import 'settings';
+
+/*
+ * AzureCSS Framework version #{$version} (#{$version_type})
+ * Default Style (no edit file)
+ * Author: GroupMediaVegarus
+ * Mail: group@vegarus.su
+ * Site: https://group.vegarus.su/azurecss
+ * MIT License
+ * All right reversed
+ * Copyright 2021
+ * Powered by GroupMediaVegarus
+ */
+$libs_list: ('azure', 'style');
+
+@if length($libs_add) != 0 {
+    @each $lib in $libs_add {
+        @import url('#{$lib}.css');
+    }
+}
+
+@each $lib in $libs_list {
+    @import url('#{$lib}.css');
+}

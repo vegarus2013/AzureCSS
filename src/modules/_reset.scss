@@ -1,0 +1,21 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: append($font_add, $font_list, comma);
+    box-sizing: border-box;
+    outline: none;
+}
+
+@if $body_bg != none {
+    body {
+        background-color: $body_bg;
+    }
+}
+
+img {
+    display: block;
+}
+/* // RESET */

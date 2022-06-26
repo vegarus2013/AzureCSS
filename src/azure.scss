@@ -1,0 +1,18 @@
+@import "version";
+
+/*
+ * AzureCSS Framework version #{$version} (#{$version_type})
+ * Default Style (no edit file)
+ * Author: GroupMediaVegarus
+ * Mail: group@vegarus.su
+ * Site: https://group.vegarus.su/azurecss
+ * MIT License
+ * All right reversed
+ * Copyright 2021
+ * Powered by GroupMediaVegarus
+ */
+
+@import 'mixins';
+@import 'functions';
+@import 'settings';
+@import 'modules/list_modules';

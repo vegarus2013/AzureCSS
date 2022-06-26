@@ -1,0 +1,11 @@
+/* CONTAINER */
+
+.container {
+    @include cont_style();
+}
+
+.container-bg {
+    @include attr_style($cont_inner_style);
+}
+
+/* // CONTAINER */

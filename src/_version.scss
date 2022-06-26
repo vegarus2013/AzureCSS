@@ -1,0 +1,8 @@
+$vesrion_type_list:('Alpha Version', 'Beta Version', 'Stable Version');
+
+
+$version: '1.5.16';
+$version_key: 1;
+
+
+$version_type: nth($vesrion_type_list, $version_key);

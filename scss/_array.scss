@@ -1,0 +1,54 @@
+$array_flex: (
+    'array':(
+        ('start', 'flex-start',), ('center', 'center',), ('end', 'flex-end',),
+        ('around', 'space-around',), ('between', 'space-between',), ('evenly', 'space-evenly',),
+        ('baseline', 'baseline',), ('stretch', 'stretch',),
+    ),  
+    'name_attr': (
+        ('jc', 'justify-content', ((1, 7),),),
+        ('ac', 'align-content', ((1, 3), (7, 8),),),
+        ('ai', 'align-items', ((1, 3), (7, 8),),),
+        ('as', 'align-self', ((1, 3), (7, 8),),),
+    ),
+);
+
+$array_texts: (
+    'array': (
+        ('left', 'left',), ('center', 'center',), ('right', 'right',), ('justify', 'justify'),
+        ('capitalize', 'capitalize',), ('lowercase', 'lowercase',), ('uppercase', 'uppercase',),
+        ('noneline', 'none',), ('underline', 'underline',), ('overline', 'overline',),
+    ),
+    'name_attr' : (
+        ('text', 'text-align', ((1,4),),),
+        ('text', 'text-transform', ((5,7),),),
+        ('text', 'text-decoration', ((8,10),),),
+    ),
+);
+
+$array_colors: (
+    'primary': (#007DFF, #3076BF, #0051A6, #409EFF, #73B8FF),
+    'secondary-a': (#FFC500, #BF9E30, #A68000, #FFD340, #FFDF73),
+    'secondary-b': (#FF5600, #BF6030, #A63800, #FF8040, #FFA273),
+    'standart': (),
+);
+
+$array_navbar: (
+    'default': (
+        'align-items': center,
+        'padding': .5rem 1rem,
+        'width': 100%,
+        'height': 50px,
+        'background': set_color('primary', 1),
+        'color': #FFFFFF,
+        'box-shadow': rgba(0, 0, 0, .25) 0 .5rem 1rem,
+    ),
+    '_link': (
+        'background': red,
+        ':hover': (
+            'background': green,
+        ),
+        ':focus': (
+            'backround': yellow,
+        ),
+    ),
+);

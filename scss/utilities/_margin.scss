@@ -1,0 +1,13 @@
+/*      MARGIN          */
+.m {
+    &l {
+        &_auto { margin-left: auto; }
+        @include sum_column('margin-left', false);
+    }
+
+    &r {
+        &_auto { margin-right: auto; }
+        @include sum_column('margin-right', false);
+    }
+}
+/*  --  MARGIN END  --  */

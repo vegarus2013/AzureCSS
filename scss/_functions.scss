@@ -1,0 +1,47 @@
+@function set_color($name, $pos) {
+    @for $i from 1 through length(map-get($array_colors, $name)) {
+        @if $i == $pos {
+            @return nth(map-get($array_colors, $name), $pos);
+        }
+    }
+}
+
+@function get_version() {
+    $version_typel: ('Pre-Alpha', 'Alpha', 'Beta', 'Release');
+    @return '#{$major}.#{$minor}.#{$milestone}.#{$revision}.#{$build} / #{nth($version_typel, $milestone)}';
+}
+
+@function get_year() {
+    @return #{nth($version_date, 1)};
+}
+
+@function import_css() {
+    $import_standart: ('font-awesome');
+    @return $import_standart;
+}
+
+@function setup_font_family() {
+    $font_family_standart: (Arial, Helvetica, sans-serif,);
+    $font_family: $import_font_family;
+    @if length($font_family) == 0 {
+        @return $font_family_standart;
+    } @else {
+        @each $font in $font_family_standart {
+            $font_family: append($font_family, $font, 'comma');
+        }
+        @return $font_family;
+    }
+}
+
+@function find_symbol_and_class($find_array) {
+    $find_symbol: ('_', ':');
+    $style_array: nth($find_array, 1);
+    $var_array: nth($find_array, 2);
+    $style_result: None;
+    $var_result: None;
+    @return None;
+}
+
+@function find_nosymbol_and_class($find_array) {
+    @return None;
+}

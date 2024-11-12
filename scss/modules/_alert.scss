@@ -1,0 +1,15 @@
+/* ALERT */
+$get_alert: get_maps_color('alert');
+
+@if map-get($make_module_name, 'alert') {
+    .alert {
+        @each $class, $attr in $get_alert {
+            &_#{$class} {
+                @each $property, $value in $attr {
+                    #{$property}: #{$value};
+                }
+            }
+        }
+    }
+}
+/* ALERT // END */

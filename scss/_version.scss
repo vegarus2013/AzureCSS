@@ -1,21 +1,18 @@
-$version_date: (2024, 3, 1);
 $major: 1;
 $minor: 1;
-$milestone: 1;
-$revision: 903;
-$build: 1;
-
+$month: 11;
+$day: 12;
 
 /*
- * AzureCSS Framework version #{(get_version())}
+ * AzureCSS Framework version #{$major}.#{$minor}.#{$month}.#{$day} /
  *
- * CSS generated via SCSS
+ * Import CSS file without SCSS generation
  *
  * Author: GroupMediaVegarus
  * Mail: group@vegarus.su
- * Site: https://vegarus.su/azurecss
+ * Site: https://vegarus.su/softs/azurecss
  * MIT License
  * All right reversed
- * Copyright 2013-#{get_year()}
+ * Copyright 2013-2024
  * Powered by GroupMediaVegarus
  */

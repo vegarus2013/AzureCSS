@@ -1,15 +1,28 @@
-$import_font_family: ('Fira Sans',);
 
-$col_count: 15;
-
-$device_width:(
-    'sm': 576px,
-    'ms': 768px,
-    'lg': 1024px,
-    'xl': 1280px,
+$container: (
+    size: 1280px,
+    padding: 40px,
 );
 
-$colors: ();
+$flex: (
+    count: 12,
+    gap: 4px,
+);
 
-$navbar_style:('default': ('background': red,),);
-$button_style:();
+$font_family: (Oswald);
+
+$color_scheme: (
+    (
+        prefix: p,
+        color: (#2B6BA4, #375B7B, #0E3F6B, #5E9BD2, #7CA9D2),
+        effect: (9, light, dark),
+    ),
+    (
+        prefix: s_a,
+        color: (#FDCD34, #BEA34D, #A58111, #FEDA67, #FEE48F),
+    ),
+    (
+        prefix: s_b,
+        color: (#FD7334, #BE704D, #A53F11, #FE9667, #FEB28F),
+    ),
+)

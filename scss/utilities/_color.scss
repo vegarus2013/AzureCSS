@@ -1,0 +1,11 @@
+
+$count_effect: 9;
+$get_effect: "";
+
+/* BACKGROUND */
+.bg { @include get_for_color_scheme('background'); }
+/* BACKGROUND // END */
+
+/* FOREGROUUND */
+.fg { @include get_for_color_scheme('color'); }
+/* FOREGROUUND // END */

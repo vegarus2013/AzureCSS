@@ -1,0 +1,17 @@
+/* HTML HEIGHT */
+%html_height {
+    height: 100%;
+}
+
+html {
+    &[azure-html="height"] {
+        %html_hdown {
+            @extend %html_height;
+        }
+
+        @extend %html_height;
+
+        body { @extend %html_height; }
+    }
+}
+/* HTML HEIGHT // END */

@@ -1,0 +1,65 @@
+$col_count: map-get($flex, 'count');
+
+/* DISPLAY: FLEX */
+%d_flex {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+.d_flex {
+    @extend %d_flex;
+}
+/* DISPLAY: FLEX // END */
+
+/* JUSTIFY-CONTENT */
+.jc { @include generate_map('flex', 'justify-content', 'all'); }
+/* JUSTIFY-CONTENT // END */
+
+/* ALIGN */
+.a {
+    &c { @include generate_map('flex', 'align-content', 'all'); }
+    &i { @include generate_map('flex', 'align-items', (1:3, 7:8)); }
+    &s { @include generate_map('flex', 'align-self', (1:3, 7:8)); }
+}
+/* ALIGN // END */
+
+/* FLEX */
+[class^=flex_] {
+    background: lightblue;
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
+    min-height: 1px;
+    position: relative;
+    
+}
+
+.flex_ {
+    &h { height: 100%; }
+    &reverse { flex-direction: row-reverse; }
+    &col {
+        flex-direction: column;
+        &_reverse { flex-direction: column-reverse; }
+    }
+    &wrap {
+        flex-wrap: wrap; 
+        &_reverse { flex-wrap: wrap-reverse; }
+    }
+
+    &grow { flex-grow: 1 !important; }
+    &shrink { flex-shrink: 1 !important; }
+    &auto { flex-basis: auto; }
+
+    @for $i from 1 through $col_count {
+        @include create_laoyut_col(("flex"), $i, $col_count, true);
+    }
+}
+
+.order_ {
+    @for $i from 1 through $col_count {
+        @include create_laoyut_col(("order"), $i, $col_count);
+    }
+    
+}
+/* FLEX // END */

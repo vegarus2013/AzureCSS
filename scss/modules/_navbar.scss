@@ -1,0 +1,23 @@
+/* NAVBAR */
+@if map-get($make_module_name, 'navbar') {
+    .navbar {
+        padding: .25rem 0;
+        width: 100%;
+        min-height: 50px;
+        background-color: #004080;
+
+        &_brand {
+            display: block;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            font-size: 1.5rem;
+
+            img {
+                padding-right: 1rem;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+/* NAVBAR // END */

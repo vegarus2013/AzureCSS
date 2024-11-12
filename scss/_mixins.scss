@@ -1,41 +1,54 @@
-@mixin sum_column($attr, $count) {
-    @for $i from 1 through $col_count {
-        @if $count == true {
-            &_#{$i} { #{$attr}: $i; }
-        } @else {
-            &_#{$i} { #{$attr}: calc((100%*$i)/$col_count); }
+@mixin create_laoyut_col($property, $num, $count, $sum: false) {
+    &#{$num} {
+        @if $sum {
+            #{$property}: calc($num * 100% / $count);
+        }
+        @else {
+            #{$property}: $num;
         }
     }
 }
 
-@mixin setup_class($var_array) {
-    $name_pos: map-get($var_array, 'name_attr');
-    $attr_pos: map-get($var_array, 'array');
 
-    @each $name, $attr, $pos in $name_pos {
-        @each $stend in $pos {
-            .#{$name}_ {
-                @for $i from nth($stend, 1) through nth($stend, 2) {
-                    &#{nth(nth($attr_pos, $i), 1)} {
-                        #{$attr}: #{nth(nth($attr_pos, $i), 2)};
-                    }
+@mixin generate_map($key, $property, $nth) {
+    $map_get: map-get($maps, $key);
+    $map: nth_index_map($map-get, $nth);
+
+    @each $key, $value in $map {
+        &_#{$key} {
+           #{$property}: #{$value};
+        }
+    }
+}
+
+@mixin get_for_color_scheme($property) {
+    @each $prefix, $colors in $color_scheme {
+        $index_count: 0;
+        $prefix: nth($prefix, 2);
+        &_#{$prefix} {
+            $colors: nth($colors, 2);
+            @each $color in $colors {
+                $index_count: $index_count + 1;
+                &_#{$index_count} {
+                    #{$property}: #{$color};
                 }
             }
         }
     }
 }
 
-@mixin get_or_set_styles($style_array, $var_array) {
-    $keys: (map-keys($style_array), map-keys($var_array));
-    $symbol_style: find_symbol_and_class(($style_array, $var_array));
-    $nosymbol_style: find_nosymbol_and_class(($style_array, $var_array));
-
-    content: '#{$keys}';
-}
-
-
-@mixin set_attr($attrs) {
-    @each $attr, $val in $attrs {
-        #{$attr}: $val;
+@mixin get_nth_color_scheme($property) {
+    @each $prefix, $colors in $color_scheme {
+        $index_count: 0;
+        $prefix: nth($prefix, 2);
+        &_#{$prefix} {
+            $colors: nth($colors, 2);
+            @each $color in $colors {
+                $index_count: $index_count + 1;
+                &_#{$index_count} {
+                    #{$property}: #{$color};
+                }
+            }
+        }
     }
 }

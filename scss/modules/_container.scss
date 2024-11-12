@@ -1,0 +1,30 @@
+@if map-get($make_module_name, "container") {
+    /* CONTAINER */
+    $container_size: map-get($container, 'size');
+    $container_padding: map-get($container, 'padding');
+
+    $container_sum: calc_sum_size($container_size, $container_padding);
+
+    %container_padding {
+        margin: 0 auto;
+        padding: 0 $container_padding;
+    }
+
+    .container {
+        width: $container_sum; 
+        @extend %container_padding;
+
+        &_html { @extend %html_hdown; }
+        
+        &_max {
+            max-width: $container_sum;
+            @extend %container_padding;
+        }
+
+        &_full {
+            @extend %container_padding;
+            width: 100%;
+        }
+    }
+    /* CONTAINER // END */
+}

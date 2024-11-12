@@ -1,0 +1,27 @@
+/* BORDER */
+.border {
+    border: 1px solid transparent;
+
+    &_top{
+        border-top: 1px solid transparent;
+        &_0 { border-top-width: 0; }
+    }
+
+    &_right{
+        border-right: 1px solid transparent;
+        &_0 { border-right-width: 0; }
+    }
+
+    &_bottom {
+        border-bottom: 1px solid transparent;
+        &_0 { border-bottom-width: 0; }
+    }
+
+    &_left {
+        border-left: 1px solid transparent;
+        &_0 { border-left-width: 0; }
+    }
+
+    @include get_for_color_scheme('border-color');
+}
+/* BORDER // END */

@@ -1,0 +1,6 @@
+@if length($font_family) != 0 {
+    @each $font in $font_family {
+        $font: to-lower-case($font);
+        @import url(./#{$font}.css);
+    }
+}

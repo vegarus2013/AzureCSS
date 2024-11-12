@@ -1,0 +1,22 @@
+/* DROP */
+.drop {
+    position: relative;
+
+    &_items {
+        display: none;
+        position: absolute;
+        z-index: 1;
+
+        &[azure-drop~="up"] { bottom: 100%; }
+        &[azure-drop~="down"] { top: 100%; }
+        &[azure-drop~="left"] { left: 100%; }
+        &[azure-drop~="right"] { right: 0; }
+    }
+    
+    &.active {
+        .drop_items { display: block; }
+    }
+
+
+}
+/* DROP // END */

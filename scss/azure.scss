@@ -1,14 +1,11 @@
-@import 'functions';
-@import 'array';
-@import 'components';
-@import 'version';
-@import 'settings';
+@import "version";
 
-/*      IMPORT CSS FILE          */
-@each $import in import_css() {
-    @import url("../#{$import}.css");
-}
-/*      IMPORT CSS FILE END  --  */
+@import "functions";
+@import "mixins";
 
-@import 'mixins';
-@import 'libs';
+@import "settings";
+@import "makes";
+
+@import "default";
+@import "modules";
+@import "utilities";
